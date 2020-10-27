@@ -1,6 +1,6 @@
 import requests
-
-r = requests.get("https://httpbin.org/get")
+k = {"key1": "value1"}
+r = requests.get("https://httpbin.org/get", params=k)
 print(r.status_code)  # 200 - successful
 # print(r.text)
 print(type(r.text))  # <class 'str'>
