@@ -15,3 +15,18 @@ Server : gunicorn/19.9.0
 Access-Control-Allow-Origin : *
 Access-Control-Allow-Credentials : true
 '''
+'''
+s = requests.session()
+r = requests.get('https://httpbin.org/cookies/set/Mayan_legend/12345')
+print(r.text)
+'''
+# {
+#     "cookies": {
+#         "Mayan_legend": "12345"
+#     }
+# }
+'''
+print(r.json()['cookies'])  # {'Mayan_legend': '12345'}
+
+
+'''
